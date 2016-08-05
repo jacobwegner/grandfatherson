@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
+from setuptools import setup
 from distutils.cmd import Command
 
 import os
@@ -68,4 +68,7 @@ setup(name='GrandFatherSon',
       ],
       license='BSD License',
       cmdclass={'test': test},
+      install_requires=[
+          'six>=1.10.0'
+      ],
 )
