@@ -52,7 +52,7 @@ class Filter(object):
         If there are ``datetimes`` after ``now``, they will be
         returned unfiltered.
         """
-        if number < 0 or not isinstance(number, (int, long)):
+        if number < 0 or not isinstance(number, six.integer_types):
             raise ValueError('Invalid number: %s' % number)
 
         datetimes = tuple(datetimes)
