@@ -5,7 +5,10 @@ Filters used by GrandFatherSon to decide which datetimes to keep.
 import calendar
 from datetime import datetime, time, timedelta, tzinfo
 
-import six
+try:
+    import six
+except ImportError:
+    pass
 
 # As gleefully stolen from the python datetime docs
 class UTC(tzinfo):
