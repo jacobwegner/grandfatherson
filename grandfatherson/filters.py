@@ -170,7 +170,7 @@ class Months(Filter):
         month = now.month - number + 1
         # Handle negative months
         if month < 0:
-            year = year + (month / cls.MONTHS_IN_YEAR)
+            year = year + (month // cls.MONTHS_IN_YEAR)
             month = month % cls.MONTHS_IN_YEAR
         # Handle December
         if month == 0:
